@@ -1,0 +1,32 @@
+GraphicsWindow.MouseMove = mousemoved 
+
+ GraphicsWindow.PenColor = ("steelblue") 
+
+lineyb = Shapes.AddRectangle ( 1 , 2000) 
+lineyt = Shapes.AddRectangle ( 1 , 2000) 
+liner  = Shapes.AddRectangle ( 2000 , 1) 
+linel  = Shapes.AddRectangle ( 2000  , 1) 
+
+Sub mousemoved 
+  
+  
+  
+  Mousex = GraphicsWindow.MouseX 
+  mousey = GraphicsWindow.MouseY
+  
+  
+  mousenewposyb = Mousey + 0.01
+  mousenewposyt = mousey - 2000.01 
+  mousenewposxr = Mousex + 0.01
+  mousenewposxl = Mousex - 2000.01 
+  
+  
+  
+  Shapes.Animate ( lineyb , mousex , mousenewposyb , 0)
+  Shapes.Animate ( lineyt , mousex , mousenewposyt , 0) 
+  Shapes.Animate ( liner  , mousenewposxr , mousey , 0) 
+  Shapes.Animate ( linel  , mousenewposxl , mousey  , 0)
+  
+ 
+ 
+ EndSub 
